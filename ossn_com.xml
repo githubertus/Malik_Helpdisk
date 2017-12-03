@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component xmlns="http://www.opensource-socialnetwork.org/v/3.0">
+    <name>Helpdisk</name>
+    <id>Helpdisk</id>
+    <author>Malik Umer Farooq</author>
+    <description>Adding help feature in ossn based web</description>
+    <license>General Public Licence</license>
+    <author_url>https://my-mos.com/public/</author_url>
+    <license_url>https://my-mos.com/public/terms/ </license_url>
+    <version>0.6</version>
+	<requires>
+		<type>ossn_version</type>
+		<version>4.4</version>
+	</requires>
+</component>
