@@ -27,9 +27,12 @@
 				<h1 class='panel-title'><?= ossn_print('helpdisk:help'); ?></h1>
 			</div>
 			<div class='panel-body'>
-				<?php foreach ($questions as $value){ ?>
-					<a href='<?= ossn_site_url(); ?>/Help?q=<?= $value->guid; ?>'id='questions'><?= $value->title; ?></a><br>
-				<?php } ?>
+				<?php
+				if ($questions) {
+					foreach ($questions as $value){ ?>
+						<a href='<?= ossn_site_url(); ?>/Help?q=<?= $value->guid; ?>'id='questions'><?= $value->title; ?></a><br>
+				<?php 	}
+				} ?>
 			</div>
 		</div>
 		<?php echo ossn_view_pagination($count);  ?>
