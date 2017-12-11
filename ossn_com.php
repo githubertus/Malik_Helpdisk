@@ -27,8 +27,9 @@ function ossn_Helpdisk_init() {
              echo ossn_view_page($title, $content);
 		}
 	}		
+	ossn_register_action('Help/search', Helpdisk . 'actions/helpsearch.php');
 		ossn_register_page('Help', 'helpdisk_page_handler');
-		ossn_register_menu_link('Help', ossn_print('helpdisk:help'), ossn_site_url('Help'), 'footer');
+		ossn_register_menu_link('Help', ossn_print('helpdisk:help'), ossn_site_url('Help'), 'footer');	
 		function helpdisk_page_handler() {
              $params['title'] = ossn_print('helpdisk:help');
              $title = $params['title'];
@@ -36,5 +37,6 @@ function ossn_Helpdisk_init() {
             $content = ossn_set_page_layout('contents', $contents);
              echo ossn_view_page($title, $content);
 		}		
+		
 }
 ossn_register_callback('ossn', 'init', 'ossn_Helpdisk_init');
